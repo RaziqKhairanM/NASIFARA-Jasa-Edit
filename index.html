@@ -1,0 +1,793 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASIFARA - Jasa Edit Video Profesional & Kreatif</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#1e1b4b',
+                        },
+                        dana: '#118EEA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-clapperboard text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white via-indigo-200 to-indigo-400 bg-clip-text text-transparent">
+                        NASIFARA
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#layanan" class="hover:text-white transition-colors">Layanan</a>
+                    <a href="#harga" class="hover:text-white transition-colors">Daftar Harga</a>
+                    <a href="#pembayaran" class="hover:text-white transition-colors">Pembayaran</a>
+                    <a href="#order" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/25 transition-all">
+                        Order Sekarang
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-5 space-y-2">
+            <a href="#layanan" class="block px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Layanan</a>
+            <a href="#harga" class="block px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Daftar Harga</a>
+            <a href="#pembayaran" class="block px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Pembayaran</a>
+            <a href="#order" class="block px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold text-center mt-2">Order Sekarang</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden">
+        <!-- Decorative Background Glow -->
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[320px] sm:w-[650px] h-[320px] sm:h-[400px] bg-indigo-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-slate-800 text-xs sm:text-sm text-indigo-300 font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Open Order Setiap Hari • Fast Response
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                Ubah Rekaman Mentah Jadi <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Karya Visual Memukau</span> Bersama NASIFARA
+            </h1>
+            
+            <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Jasa edit video profesional untuk konten TikTok, Reels, YouTube, Cinematic Wedding, hingga Tugas Sekolah/Kuliah. Harga transparan berdasarkan tipe & durasi, bayar mudah via <strong>DANA</strong> atau <strong>Cash</strong>.
+            </p>
+            
+            <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#harga" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-xl shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-tags"></i> Lihat Daftar Harga
+                </a>
+                <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold transition-all flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> Chat Admin WhatsApp
+                </a>
+            </div>
+
+            <!-- Stats / Keunggulan Singkat -->
+            <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+                    <p class="text-2xl sm:text-3xl font-extrabold text-white">1080p - 4K</p>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">Kualitas Render Jernih</p>
+                </div>
+                <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+                    <p class="text-2xl sm:text-3xl font-extrabold text-indigo-400">1-3 Hari</p>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">Pengerjaan Cepat</p>
+                </div>
+                <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+                    <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">Free Revisi</p>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">Sesuai Paket Pilihan</p>
+                </div>
+                <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+                    <p class="text-2xl sm:text-3xl font-extrabold text-sky-400">DANA / Cash</p>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">Pembayaran Fleksibel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami -->
+    <section id="layanan" class="py-16 sm:py-24 bg-slate-900/40 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Tipe Editan Video</h2>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">Pilih kategori editan yang sesuai dengan kebutuhan konten maupun acara spesial Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Short Video / Reels</h3>
+                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Cocok untuk TikTok, Instagram Reels, & YouTube Shorts. Termasuk cut rapi, subtitle dinamis, sound effect, & transisi kekinian.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">YouTube / Vlog / Gaming</h3>
+                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Editan video panjang dengan alur cerita menarik, meme/overlay lucu, background music no-copyright, dan color correction.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Cinematic & Event</h3>
+                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Video dokumentasi pernikahan, prewedding, wisuda, atau company profile dengan color grading sinematik dan beat-sync.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Tugas & Presentasi</h3>
+                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Solusi cepat untuk video tugas sekolah, kuliah, iklan produk UMKM, maupun video presentasi kelompok dengan harga pelajar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Harga Berdasarkan Tipe & Durasi -->
+    <section id="harga" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-indigo-400 font-semibold text-sm tracking-wider uppercase">Price List Transparan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Daftar Harga Berdasarkan Tipe & Durasi</h2>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">Pilih kategori tipe editan di bawah ini untuk melihat rincian harga berdasarkan durasi hasil akhir video.</p>
+            </div>
+
+            <!-- Filter Tab Kategori -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="category-tabs">
+                <button onclick="filterPrices('all')" data-cat="all" class="tab-btn active px-5 py-3 rounded-2xl text-sm font-semibold bg-indigo-600 text-white shadow-lg shadow-indigo-600/25 transition-all">
+                    Semua Tipe
+                </button>
+                <button onclick="filterPrices('short')" data-cat="short" class="tab-btn px-5 py-3 rounded-2xl text-sm font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-all">
+                    Short / Reels / TikTok
+                </button>
+                <button onclick="filterPrices('youtube')" data-cat="youtube" class="tab-btn px-5 py-3 rounded-2xl text-sm font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-all">
+                    YouTube / Vlog
+                </button>
+                <button onclick="filterPrices('cinematic')" data-cat="cinematic" class="tab-btn px-5 py-3 rounded-2xl text-sm font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-all">
+                    Cinematic / Event
+                </button>
+                <button onclick="filterPrices('tugas')" data-cat="tugas" class="tab-btn px-5 py-3 rounded-2xl text-sm font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-all">
+                    Tugas / Promosi
+                </button>
+            </div>
+
+            <!-- Grid Kartu Harga -->
+            <div id="price-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Diisi dinamis melalui JavaScript -->
+            </div>
+
+            <!-- Tabel Ringkasan Lengkap (Responsive) -->
+            <div class="mt-14 bg-slate-900/80 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
+                <div class="p-6 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Tabel Ringkasan Tarif Edit Video NASIFARA</h3>
+                        <p class="text-xs sm:text-sm text-slate-400">Klik tombol "Pilih Paket" pada baris mana saja untuk langsung mengisi form order.</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-xl bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 w-fit">
+                        <i class="fa-solid fa-circle-info"></i> Durasi Custom? Bisa Nego!
+                    </span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-950/60 text-slate-400 text-xs uppercase tracking-wider border-b border-slate-800">
+                                <th class="py-4 px-6 font-semibold">Tipe Editan</th>
+                                <th class="py-4 px-6 font-semibold">Durasi Hasil</th>
+                                <th class="py-4 px-6 font-semibold">Fasilitas Utama</th>
+                                <th class="py-4 px-6 font-semibold">Harga</th>
+                                <th class="py-4 px-6 font-semibold text-right">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="price-table-body" class="divide-y divide-slate-800/70 text-sm">
+                            <!-- Diisi dinamis oleh JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metode Pembayaran Section -->
+    <section id="pembayaran" class="py-16 bg-slate-900/40 border-y border-slate-800/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-3xl font-extrabold text-white">Metode Pembayaran</h2>
+                <p class="mt-2 text-slate-400 text-sm sm:text-base">NASIFARA menerima pembayaran yang praktis dan aman sesuai kenyamanan Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- DANA Card -->
+                <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-sky-950/70 to-slate-900 border border-sky-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-4 py-1.5 rounded-xl bg-sky-500 text-white font-extrabold tracking-wide text-sm shadow-lg shadow-sky-500/30">
+                                DANA (E-Wallet)
+                            </span>
+                            <i class="fa-solid fa-wallet text-2xl text-sky-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Transfer via Aplikasi DANA</h3>
+                        <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                            Cocok untuk pemesanan jarak jauh/online. Nomor tujuan DANA akan diberikan oleh admin WhatsApp setelah detail pesanan disepakati (bisa DP 50% atau Lunas).
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-sky-500/20 flex items-center justify-between text-xs text-sky-300">
+                        <span><i class="fa-solid fa-check-circle mr-1"></i> Proses Instan</span>
+                        <span><i class="fa-solid fa-check-circle mr-1"></i> Kirim Bukti via WA</span>
+                    </div>
+                </div>
+
+                <!-- CASH Card -->
+                <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-950/60 to-slate-900 border border-emerald-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-4 py-1.5 rounded-xl bg-emerald-600 text-white font-extrabold tracking-wide text-sm shadow-lg shadow-emerald-600/30">
+                                CASH / TUNAI
+                            </span>
+                            <i class="fa-solid fa-money-bill-wave text-2xl text-emerald-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Pembayaran Tunai (COD / Ketemuan)</h3>
+                        <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                            Khusus pelanggan area sekitar / teman sekolah & kampus. Pembayaran tunai dapat dilakukan secara langsung saat serah terima file atau pertemuan dengan tim NASIFARA.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-emerald-500/20 flex items-center justify-between text-xs text-emerald-300">
+                        <span><i class="fa-solid fa-check-circle mr-1"></i> Tanpa Biaya Admin</span>
+                        <span><i class="fa-solid fa-check-circle mr-1"></i> Bisa Sekalian Kirim File Mentah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Pemesanan & Kontak WhatsApp -->
+    <section id="order" class="py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+                
+                <!-- Kolom Kiri: Form Order Otomatis ke WhatsApp -->
+                <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Form Pemesanan Cepat</h2>
+                    <p class="text-sm text-slate-400 mt-1.5">Isi detail pesanan Anda di bawah ini, lalu klik kirim untuk terhubung otomatis ke WhatsApp admin NASIFARA.</p>
+
+                    <form id="order-form" class="mt-6 space-y-5">
+                        <div>
+                            <label for="customer-name" class="block text-sm font-medium text-slate-300 mb-1.5">Nama Pemesan</label>
+                            <input type="text" id="customer-name" required placeholder="Contoh: Budi Santoso" 
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="edit-type" class="block text-sm font-medium text-slate-300 mb-1.5">Tipe Editan & Durasi</label>
+                                <select id="edit-type" required 
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                                    <!-- Diisi otomatis oleh JS -->
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="payment-method" class="block text-sm font-medium text-slate-300 mb-1.5">Metode Pembayaran</label>
+                                <select id="payment-method" required 
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                                    <option value="DANA">DANA (E-Wallet)</option>
+                                    <option value="Cash / Tunai">Cash / Tunai</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="admin-select" class="block text-sm font-medium text-slate-300 mb-1.5">Pilih Admin WhatsApp Tujuan</label>
+                            <select id="admin-select" required 
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                                <option value="6282115915001">Admin 1 — 0821-1591-5001</option>
+                                <option value="6282313438332">Admin 2 — 0823-1343-8332</option>
+                                <option value="6282126354233">Admin 3 — 0821-2635-4233</option>
+                                <option value="6285861984837">Admin 4 — 0858-6198-4837</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="notes" class="block text-sm font-medium text-slate-300 mb-1.5">Catatan Konsep / Link Bahan Mentah (Opsional)</label>
+                            <textarea id="notes" rows="3" placeholder="Contoh: Konsep jedag-jedug/aesthetic, warna cerah, bahan dikirim lewat Google Drive..." 
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            Kirim Pesanan ke WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Kolom Kanan: Daftar Kontak Langsung 4 Nomor WA -->
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-7">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-headset text-indigo-400"></i> Kontak Resmi NASIFARA
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-1.5">
+                            Ingin konsultasi dulu sebelum memesan? Klik salah satu nomor WhatsApp admin kami di bawah ini:
+                        </p>
+
+                        <div class="mt-5 space-y-3" id="wa-direct-list">
+                            <!-- Admin 1 -->
+                            <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-bold">
+                                        1
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Admin NASIFARA 1</p>
+                                        <p class="text-sm sm:text-base font-bold text-white">0821-1591-5001</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="copyPhone('082115915001')" title="Salin Nomor" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                    <a href="https://wa.me/6282115915001?text=Halo%20Admin%20NASIFARA%2C%20saya%20ingin%20tanya%20jasa%20edit%20video." target="_blank" rel="noopener noreferrer" 
+                                        class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors">
+                                        <i class="fa-brands fa-whatsapp"></i> Chat
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Admin 2 -->
+                            <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-bold">
+                                        2
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Admin NASIFARA 2</p>
+                                        <p class="text-sm sm:text-base font-bold text-white">0823-1343-8332</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="copyPhone('082313438332')" title="Salin Nomor" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                    <a href="https://wa.me/6282313438332?text=Halo%20Admin%20NASIFARA%2C%20saya%20ingin%20tanya%20jasa%20edit%20video." target="_blank" rel="noopener noreferrer" 
+                                        class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors">
+                                        <i class="fa-brands fa-whatsapp"></i> Chat
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Admin 3 -->
+                            <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-bold">
+                                        3
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Admin NASIFARA 3</p>
+                                        <p class="text-sm sm:text-base font-bold text-white">0821-2635-4233</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="copyPhone('082126354233')" title="Salin Nomor" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                    <a href="https://wa.me/6282126354233?text=Halo%20Admin%20NASIFARA%2C%20saya%20ingin%20tanya%20jasa%20edit%20video." target="_blank" rel="noopener noreferrer" 
+                                        class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors">
+                                        <i class="fa-brands fa-whatsapp"></i> Chat
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Admin 4 -->
+                            <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-bold">
+                                        4
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Admin NASIFARA 4</p>
+                                        <p class="text-sm sm:text-base font-bold text-white">0858-6198-4837</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="copyPhone('085861984837')" title="Salin Nomor" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                    <a href="https://wa.me/6285861984837?text=Halo%20Admin%20NASIFARA%2C%20saya%20ingin%20tanya%20jasa%20edit%20video." target="_blank" rel="noopener noreferrer" 
+                                        class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-colors">
+                                        <i class="fa-brands fa-whatsapp"></i> Chat
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alur Pemesanan Singkat -->
+                    <div class="bg-indigo-950/30 border border-indigo-500/20 rounded-3xl p-6">
+                        <h4 class="font-bold text-indigo-300 text-sm uppercase tracking-wider mb-3">Cara Order Mudah</h4>
+                        <ol class="space-y-2.5 text-sm text-slate-300 list-decimal list-inside">
+                            <li>Pilih tipe editan & durasi video yang diinginkan.</li>
+                            <li>Kirim pesanan melalui form atau chat langsung salah satu nomor WhatsApp di atas.</li>
+                            <li>Kirim bahan mentah video via Google Drive / Telegram / WhatsApp Dokumen.</li>
+                            <li>Lakukan pembayaran via <strong>DANA</strong> atau <strong>Cash</strong>, lalu video siap diproses!</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
+                    <i class="fa-solid fa-clapperboard text-white text-sm"></i>
+                </div>
+                <span class="text-lg font-extrabold text-white tracking-tight">NASIFARA</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400 text-center">
+                &copy; 2026 NASIFARA Video Editing Service. Pembayaran via DANA & Cash.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Notifikasi Toast (Pengganti alert) -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-800 border border-slate-700 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-sm font-medium">
+            <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+            <span id="toast-message">Nomor berhasil disalin!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Logika Aplikasi -->
+    <script>
+        // Data Daftar Harga Berdasarkan Tipe Editan dan Durasi
+        const pricePackages = [
+            {
+                id: 'short-1',
+                category: 'short',
+                categoryLabel: 'Short / Reels / TikTok',
+                title: 'Short Basic (≤ 30 Detik)',
+                duration: '15 - 30 Detik',
+                price: 'Rp 25.000',
+                badge: 'Terlaris',
+                features: [
+                    'Cut & Trim Rapi',
+                    'Subtitle / Teks Dinamis',
+                    'Backsound & SFX Dasar',
+                    'Revisi 1x (1080p 60fps)'
+                ]
+            },
+            {
+                id: 'short-2',
+                category: 'short',
+                categoryLabel: 'Short / Reels / TikTok',
+                title: 'Short Pro (30 - 60 Detik)',
+                duration: '31 - 60 Detik',
+                price: 'Rp 45.000',
+                badge: '',
+                features: [
+                    'Transisi Smooth & Keyframe',
+                    'Full Subtitle + Animasi',
+                    'Color Grading & SFX Lengkap',
+                    'Revisi 2x (1080p 60fps)'
+                ]
+            },
+            {
+                id: 'yt-1',
+                category: 'youtube',
+                categoryLabel: 'YouTube / Vlog',
+                title: 'YouTube Reguler (3 - 7 Menit)',
+                duration: '3 - 7 Menit',
+                price: 'Rp 85.000',
+                badge: 'Populer',
+                features: [
+                    'Storyline & Pemotongan Jeda',
+                    'Backsound No-Copyright',
+                    'Overlay Gambar / Meme / Teks',
+                    'Revisi 2x (Full HD 1080p)'
+                ]
+            },
+            {
+                id: 'yt-2',
+                category: 'youtube',
+                categoryLabel: 'YouTube / Vlog',
+                title: 'YouTube Panjang (8 - 15 Menit)',
+                duration: '8 - 15 Menit',
+                price: 'Rp 150.000',
+                badge: '',
+                features: [
+                    'Editing Full Dinamis & Intro/Outro',
+                    'Audio Mixing & Noise Reduction',
+                    'Motion Graphic & Lower Third',
+                    'Revisi 3x (Hingga 4K)'
+                ]
+            },
+            {
+                id: 'cine-1',
+                category: 'cinematic',
+                categoryLabel: 'Cinematic / Event',
+                title: 'Cinematic Teaser (1 - 2 Menit)',
+                duration: '1 - 2 Menit',
+                price: 'Rp 120.000',
+                badge: 'Sinematik',
+                features: [
+                    'Beat-Sync Musik Dramatis',
+                    'Color Grading Sinematik',
+                    'Slow Motion Smooth (Optical Flow)',
+                    'Revisi 2x (1080p / 4K)'
+                ]
+            },
+            {
+                id: 'cine-2',
+                category: 'cinematic',
+                categoryLabel: 'Cinematic / Event',
+                title: 'Dokumentasi Event (3 - 5 Menit)',
+                duration: '3 - 5 Menit',
+                price: 'Rp 200.000',
+                badge: '',
+                features: [
+                    'Wedding / Wisuda / Acara Kampus',
+                    'Color Grading & Stabilizer',
+                    'Sound Design & Cinematic Title',
+                    'Revisi 3x (1080p / 4K)'
+                ]
+            },
+            {
+                id: 'tugas-1',
+                category: 'tugas',
+                categoryLabel: 'Tugas / Promosi',
+                title: 'Paket Pelajar / Tugas (1 - 3 Menit)',
+                duration: '1 - 3 Menit',
+                price: 'Rp 35.000',
+                badge: 'Hemat',
+                features: [
+                    'Video Presentasi / Tugas Sekolah',
+                    'Teks Penjelasan & Transisi Rapi',
+                    'Backsound Sesuai Tema',
+                    'Revisi 2x (Pengerjaan Cepat)'
+                ]
+            },
+            {
+                id: 'tugas-2',
+                category: 'tugas',
+                categoryLabel: 'Tugas / Promosi',
+                title: 'Iklan Produk / UMKM (30 - 60 Detik)',
+                duration: '30 - 60 Detik',
+                price: 'Rp 60.000',
+                badge: '',
+                features: [
+                    'Hook Menarik & Call-to-Action',
+                    'Teks Promo & Harga Jelas',
+                    'Color Correction Produk Cerah',
+                    'Revisi 2x (Siap Upload Sosmed)'
+                ]
+            }
+        ];
+
+        // Render Kartu Harga & Tabel Ringkasan
+        function renderPrices(filter = 'all') {
+            const grid = document.getElementById('price-grid');
+            const tableBody = document.getElementById('price-table-body');
+            
+            const filtered = filter === 'all' 
+                ? pricePackages 
+                : pricePackages.filter(item => item.category === filter);
+
+            // Render Cards
+            grid.innerHTML = filtered.map(pkg => `
+                <div class="relative flex flex-col justify-between p-6 rounded-3xl bg-slate-900 border ${pkg.badge ? 'border-indigo-500/60 shadow-lg shadow-indigo-950/40' : 'border-slate-800'} hover:border-indigo-500 transition-all">
+                    ${pkg.badge ? `<span class="absolute -top-3 right-5 px-3 py-1 rounded-full bg-indigo-600 text-white text-xs font-bold shadow">${pkg.badge}</span>` : ''}
+                    <div>
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">${pkg.categoryLabel}</span>
+                        <h3 class="text-lg font-bold text-white mt-1">${pkg.title}</h3>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-2xl sm:text-3xl font-extrabold text-white">${pkg.price}</span>
+                        </div>
+                        <div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 text-xs text-slate-300 border border-slate-800">
+                            <i class="fa-regular fa-clock text-indigo-400"></i> Durasi: ${pkg.duration}
+                        </div>
+                        <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+                            ${pkg.features.map(f => `
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
+                                    <span>${f}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                    <button type="button" onclick="selectPackage('${pkg.id}')" 
+                        class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <span>Pilih Paket Ini</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            // Render Tabel Ringkasan (selalu tampilkan semua untuk referensi cepat)
+            tableBody.innerHTML = pricePackages.map(pkg => `
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                    <td class="py-4 px-6 font-semibold text-white">
+                        <div>${pkg.title}</div>
+                        <span class="text-xs text-indigo-400 font-normal">${pkg.categoryLabel}</span>
+                    </td>
+                    <td class="py-4 px-6 text-slate-300 whitespace-nowrap">${pkg.duration}</td>
+                    <td class="py-4 px-6 text-slate-400 text-xs max-w-xs">${pkg.features.slice(0, 2).join(', ')}</td>
+                    <td class="py-4 px-6 font-bold text-emerald-400 whitespace-nowrap">${pkg.price}</td>
+                    <td class="py-4 px-6 text-right whitespace-nowrap">
+                        <button type="button" onclick="selectPackage('${pkg.id}')" 
+                            class="px-3.5 py-2 rounded-xl bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-semibold border border-indigo-500/30 transition-all cursor-pointer">
+                            Pilih Paket
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Isi Dropdown Paket di Form Order
+        function populateSelectOptions() {
+            const select = document.getElementById('edit-type');
+            select.innerHTML = pricePackages.map(pkg => 
+                `<option value="${pkg.title} (${pkg.duration}) - ${pkg.price}">${pkg.title} — ${pkg.price}</option>`
+            ).join('') + `<option value="Custom Edit / Durasi Khusus (Nego via WA)">Custom Edit / Durasi Khusus (Nego)</option>`;
+        }
+
+        // Filter Tab Kategori
+        function filterPrices(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.classList.remove('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+                    btn.classList.add('bg-indigo-600', 'text-white', 'shadow-lg', 'shadow-indigo-600/25');
+                } else {
+                    btn.classList.add('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+                    btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-lg', 'shadow-indigo-600/25');
+                }
+            });
+            renderPrices(category);
+        }
+
+        // Pilih Paket dari Kartu/Tabel lalu Scroll ke Form
+        function selectPackage(pkgId) {
+            const pkg = pricePackages.find(p => p.id === pkgId);
+            if (!pkg) return;
+
+            const select = document.getElementById('edit-type');
+            const targetValue = `${pkg.title} (${pkg.duration}) - ${pkg.price}`;
+            select.value = targetValue;
+
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+            showToast(`Paket "${pkg.title}" dipilih!`);
+        }
+
+        // Salin Nomor WhatsApp menggunakan document.execCommand('copy')
+        function copyPhone(number) {
+            const tempInput = document.createElement('input');
+            tempInput.value = number;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast(`Nomor ${number} berhasil disalin!`);
+            } catch (err) {
+                showToast('Gagal menyalin nomor.');
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Tampilkan Notifikasi Toast
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
+        // Handle Submit Form ke WhatsApp
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('customer-name').value.trim();
+            const packageInfo = document.getElementById('edit-type').value;
+            const payment = document.getElementById('payment-method').value;
+            const adminPhone = document.getElementById('admin-select').value;
+            const notes = document.getElementById('notes').value.trim() || '-';
+
+            const message = 
+`Halo Admin *NASIFARA*, saya ingin memesan jasa edit video:
+
+• *Nama:* ${name}
+• *Paket & Durasi:* ${packageInfo}
+• *Pembayaran:* ${payment}
+• *Catatan/Konsep:* ${notes}
+
+Mohon info langkah selanjutnya untuk pengiriman bahan video. Terima kasih!`;
+
+            const waUrl = `https://wa.me/${adminPhone}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank', 'noopener,noreferrer');
+        });
+
+        // Toggle Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tutup mobile menu saat link diklik
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Inisialisasi Halaman
+        window.addEventListener('DOMContentLoaded', () => {
+            renderPrices('all');
+            populateSelectOptions();
+        });
+    </script>
+</body>
+</html>
+```
